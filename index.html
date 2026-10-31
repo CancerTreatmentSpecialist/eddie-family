@@ -175,8 +175,8 @@ APPS.filter(a => a.audience === "both" || corporate).forEach(a => {
   el.className = "card " + a.style;
   const tags = a.tags.map(t => `<span class="tag ${/soon/i.test(t) ? "soon" : ""}">${t}</span>`).join("");
   const btn = (url, label) => url ? `<a class="btn" href="${url}" target="_blank" rel="noopener">${label}</a>` : "";
-  // Official hosted store badges (Apple Marketing Tools / Google Play). Each shows only when its store link is filled in.
-  const apple = a.ios ? `<a href="${a.ios}" target="_blank" rel="noopener" aria-label="Download ${a.name} on the App Store"><img class="apple" src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store"></a>` : "";
+  // Official store badges. Apple badge = app-store-badge.svg uploaded to this repo (from Apple Marketing Tools). Each shows only when its store link is filled in.
+  const apple = a.ios ? `<a href="${a.ios}" target="_blank" rel="noopener" aria-label="Download ${a.name} on the App Store"><img class="apple" src="app-store-badge.svg" alt="Download on the App Store"></a>` : "";
   const google = a.android ? `<a href="${a.android}" target="_blank" rel="noopener" aria-label="Get ${a.name} on Google Play"><img class="google" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play"></a>` : "";
   el.innerHTML = `
     <h3>${a.name}</h3>
