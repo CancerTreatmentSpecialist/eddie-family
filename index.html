@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The EDDIE Family</title>
+<meta name="description" content="The EDDIE family of health education and prevention apps from Cancer Treatment Specialist, PC.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brand:#1B9BD7; --brand-dark:#12719F; --ink:#0F2533; --muted:#4F6575;
+    --line:#DCE8F0; --card:#FFFFFF; --bg:#F5FAFD; --shelia:#4A1D66; --green:#1E8E5A;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+  a{color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:40px 16px 32px}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+  h1{font-size:clamp(28px,4vw,40px);font-weight:800;line-height:1.15;margin:8px 0 12px}
+  .lede{font-size:17px;color:var(--muted);max-width:720px}
+  section{margin-top:40px}
+  h2{font-size:20px;font-weight:700;margin-bottom:6px}
+  .sub{color:var(--muted);font-size:15px;margin-bottom:16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:8px;border-top:4px solid var(--brand)}
+  .card.shelia{border-top-color:var(--shelia)}
+  .card.prev{border-top-color:var(--green)}
+  .card h3{font-size:17px;font-weight:700}
+  .card p{font-size:14px;color:var(--muted);flex:1}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:11px;font-weight:600;padding:3px 8px;border-radius:99px;background:#E8F4FB;color:var(--brand-dark)}
+  .tag.soon{background:#FFF4E0;color:#8A5A00}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+  .btn{display:inline-block;font-size:13px;font-weight:600;text-decoration:none;padding:8px 14px;border-radius:8px;background:var(--brand);color:#fff}
+  .btn.ghost{background:transparent;color:var(--brand-dark);border:1px solid var(--line)}
+  .card.shelia .btn{background:var(--shelia)}
+  .card.prev .btn{background:var(--green)}
+  .badges{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:2px}
+  .badges a{display:inline-flex;line-height:0}
+  .badges img.apple{height:40px;width:auto}
+  .badges img.google{height:58px;width:auto;margin:-9px -8px} /* Google's PNG has built-in padding; this matches Apple's height */
+  .program{font-size:13px;color:var(--ink);background:#EEF8F2;border-radius:8px;padding:8px 10px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:8px}
+  .pillar h3{font-size:15px;font-weight:700;margin-bottom:4px;color:var(--brand-dark)}
+  .pillar p{font-size:14px;color:var(--muted)}
+  .lead-row{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+  .lead-row > div{flex:1 1 280px}
+  .contact a{color:var(--brand-dark);font-weight:600}
+  footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+  .corp-only{display:none}
+  body.corporate .corp-only{display:block}
+  body.corporate .consumer-only{display:none}
+  @media (max-width:480px){ .wrap{padding-top:28px} .lede{font-size:16px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===== HEADER (consumer) ===== -->
+  <header class="consumer-only">
+    <div class="eyebrow">The EDDIE Family</div>
+    <h1>Free tools to help you learn, prevent, and live healthier.</h1>
+    <p class="lede">Built by a cancer surgeon for everyone, especially communities too often left behind. Pick the app that fits where you are today.</p>
+  </header>
+
+  <!-- ===== HEADER (corporate) ===== -->
+  <header class="corp-only">
+    <div class="eyebrow">Cancer Treatment Specialist, PC · Digital Health Initiatives</div>
+    <h1>A prevention and health-equity platform for underserved communities.</h1>
+    <p class="lede">EDDIE, Eliminating Disparities through Data-driven Intelligent Empowerment, is a family of health education, prevention, and research-access tools developed under the clinical leadership of a board-certified surgical oncologist.</p>
+  </header>
+
+  <!-- ===== APPS (filled by script) ===== -->
+  <section>
+    <h2 class="consumer-only">Our apps</h2>
+    <h2 class="corp-only">Platform portfolio</h2>
+    <p class="sub">All apps are free to use. Tap a card to open the app on the web or download it.</p>
+    <div class="grid" id="apps"></div>
+  </section>
+
+  <!-- ===== CORPORATE: architecture & mission ===== -->
+  <section class="corp-only">
+    <div class="panel">
+      <h2>How the platform fits together</h2>
+      <div class="pillars">
+        <div class="pillar"><h3>Learn</h3><p>Ask EDDIE, Ask SHELIA, and the EDDIE Lung, Colon, and Prostate apps deliver plain-language cancer and women's health education.</p></div>
+        <div class="pillar"><h3>Prevent</h3><p>Eddie Prevention is the flagship behavior-change platform: daily and weekly check-ins and progress tracking for tobacco, alcohol, nutrition, and activity. CancerLess is its cancer-prevention program.</p></div>
+        <div class="pillar"><h3>Access research</h3><p>The Clinical Trials Navigator helps patients find trials; Clinical Trials Pro supports institutional research teams with trial screening.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="corp-only">
+    <div class="panel lead-row">
+      <div>
+        <h2>Clinical leadership</h2>
+        <p class="sub" style="margin-bottom:0"><strong style="color:var(--ink)">Derrick J. Beech, MD, FACS</strong><br>Founder &amp; CEO, Cancer Treatment Specialist, PC. Surgical oncologist and former Senior Associate Dean for Clinical Affairs, Morehouse School of Medicine.</p>
+      </div>
+      <div>
+        <h2>Collaborations</h2>
+        <p class="sub" style="margin-bottom:0">Academic collaborations with Morehouse School of Medicine and VCU Massey Cancer Center. Community partner: Pono Foundation, Inc., a 501(c)(3).</p>
+      </div>
+      <div class="contact">
+        <h2>Partner with us</h2>
+        <p class="sub" style="margin-bottom:0">Health systems, foundations, employers, and community organizations:<br>
+        <a href="mailto:doctor@cancerexpert.org">doctor@cancerexpert.org</a> · <a href="tel:+14043877244">404-387-7244</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    These apps provide general health education and are not a substitute for professional medical advice, diagnosis, or treatment. Always consult your healthcare provider. In an emergency, call 911.
+    <br>© <span id="yr"></span> Cancer Treatment Specialist, PC · Sandy Springs, GA
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   EDIT HERE: one entry per app. Paste the App Store / Google Play URL into ios / android to show the official badge. Leave "" to hide it.
+   audience: "both" | "corporate"  (corporate = only on cancerexpert.org view)
+   ============================================================ */
+const APPS = [
+  { name:"Ask EDDIE", style:"", audience:"both",
+    desc:"Your cancer copilot. Ask questions about cancer, screening, and treatment in plain language, 24/7.",
+    tags:["Web"],
+    web:"https://askeddie.org", ios:"https://apps.apple.com/us/app/ask-eddie-your-cancer-copilot/id6760727031", android:"" },
+
+  { name:"Eddie Prevention", style:"prev", audience:"both",
+    desc:"Track daily and weekly habits (tobacco, alcohol, food, activity) and watch your progress toward lower risk of heart disease, diabetes, and cancer.",
+    program:"Includes <strong>CancerLess</strong>, our cancer-prevention program.",
+    tags:["Web","iPhone coming soon"],
+    web:"https://app.eddieprevention.org", ios:"", android:"" },
+
+  { name:"CancerLess", style:"prev", audience:"both",
+    desc:"Lower your cancer risk with check-ins, a progress dashboard, and a cancer resource library.",
+    tags:["Web"],
+    web:"https://getcancerless.org", ios:"https://apps.apple.com/us/app/cancerless/id6783916380", android:"" },
+
+  { name:"Ask SHELIA", style:"shelia", audience:"both",
+    desc:"Women's health, clearly explained: wellness, reproductive health, women's cancers, and genetics.",
+    tags:["Web","iPhone coming soon"],
+    web:"https://askshelia.org", ios:"", android:"" },
+
+  { name:"EDDIE Lung", style:"", audience:"both",
+    desc:"Lung cancer education: screening, diagnosis, treatment options, and support.",
+    tags:[], web:"", ios:"https://apps.apple.com/us/app/eddie-lung/id6780681313", android:"" },
+
+  { name:"EDDIE Colon", style:"", audience:"both",
+    desc:"Colorectal cancer education: screening, prevention, treatment, and survivorship.",
+    tags:[], web:"", ios:"https://apps.apple.com/us/app/eddie-colon/id6782375456", android:"" },
+
+  { name:"EDDIE Prostate", style:"", audience:"both",
+    desc:"Prostate cancer education: screening, PSA, treatment choices, and side effects.",
+    tags:[], web:"", ios:"https://apps.apple.com/us/app/eddie-prostate/id6780092180", android:"" },
+
+  { name:"EDDIE Clinical Trials Navigator", style:"", audience:"both",
+    desc:"Find and understand clinical trials that may fit your situation, explained in plain language.",
+    tags:["Web"],
+    web:"https://eddieclinicaltrialsnavigator.org", ios:"", android:"" },
+
+  { name:"EDDIE Clinical Trials Pro", style:"", audience:"corporate",
+    desc:"For research teams: supports clinical trial screening and recruitment at partner institutions.",
+    tags:["Institutional"],
+    web:"https://eddieclinicaltrialspro.com", ios:"", android:"" }
+];
+
+const corporate = new URLSearchParams(location.search).get("view") === "corporate";
+if (corporate) document.body.classList.add("corporate");
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+const grid = document.getElementById("apps");
+APPS.filter(a => a.audience === "both" || corporate).forEach(a => {
+  const el = document.createElement("article");
+  el.className = "card " + a.style;
+  const tags = a.tags.map(t => `<span class="tag ${/soon/i.test(t) ? "soon" : ""}">${t}</span>`).join("");
+  const btn = (url, label) => url ? `<a class="btn" href="${url}" target="_blank" rel="noopener">${label}</a>` : "";
+  // Official hosted store badges (Apple Marketing Tools / Google Play). Each shows only when its store link is filled in.
+  const apple = a.ios ? `<a href="${a.ios}" target="_blank" rel="noopener" aria-label="Download ${a.name} on the App Store"><img class="apple" src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store"></a>` : "";
+  const google = a.android ? `<a href="${a.android}" target="_blank" rel="noopener" aria-label="Get ${a.name} on Google Play"><img class="google" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play"></a>` : "";
+  el.innerHTML = `
+    <h3>${a.name}</h3>
+    ${tags ? `<div class="tags">${tags}</div>` : ""}
+    <p>${a.desc}</p>
+    ${a.program ? `<div class="program">${a.program}</div>` : ""}
+    ${(apple || google) ? `<div class="badges">${apple}${google}</div>` : ""}
+    ${a.web ? `<div class="links">${btn(a.web,"Open on the web")}</div>` : ""}`;
+  grid.appendChild(el);
+});
+</script>
+</body>
+</html>
